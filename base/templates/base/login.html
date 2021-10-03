@@ -1,10 +1,16 @@
-<h1>Login</h1>
+{% extends 'base/main.html' %}
+{% block content %}
+<div class="login">
+    <h1 class="tm" style="text-align: center;">TASK MANAGER</h1>
+<h2 style="text-align: center;">Login</h2>
 
-<form method="POST">
+<form method="POST" style="text-align: center;">
     {% csrf_token %}
     {{form.as_p}}
-    <input type="submit" value="Login">
+    <input class="button" type="submit" value="Login">
 
 </form>
 
-<p>Don't have an account? <a href="{% url 'register' %}">Register</a></p>
+<p style="text-align: center;">Don't have an account? <a href="{% url 'register' %}">Register</a></p>
+</div>
+{% endblock content %}

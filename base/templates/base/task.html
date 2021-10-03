@@ -1,1 +1,9 @@
+{% extends 'base/main.html' %}
+{% block content %}
+
+<a href="{% url 'tasks' %}">Back</a>
 <h1>Task: {{task}}</h1>
+<td><a href="{% url 'task-update' task.id %}">Edit</a></td>
+
+
+{% endblock content %}
